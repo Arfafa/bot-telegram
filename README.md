@@ -43,3 +43,6 @@ $ python app.py
 
 Para funcionar corretamente, o servidor flask e a conexão ssh devem estar 
 rodando ao mesmo tempo em terminais diferentes.
+
+**PS**: Você pode ver um bot funcionando com o código deste projeto em: 
+[arfafa\_bot](https://t.me/Arfafa_bot)
