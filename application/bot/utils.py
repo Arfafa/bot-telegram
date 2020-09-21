@@ -1,6 +1,7 @@
+import os
 from application.bot.telegram_bot import TelegramBot
 
-TELEGRAM_TOKEN = '484342312:AAEVje5CZ_ZQ5UgJtWsrtunBoH7yhzdoy2w'
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', '')
 TELEGRAM_BOT = TelegramBot(TELEGRAM_TOKEN)
 
 
