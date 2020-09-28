@@ -23,16 +23,10 @@ class TelegramBot:
         try:
             number = int(text)
 
-            if not number % 15:
-                msg = 'FizzBuzz'
+            msg = 'Fizz' * (number % 3 == 0)
+            msg += 'Buzz' * (number % 5 == 0)
 
-            elif not number % 3:
-                msg = 'Fizz'
-
-            elif not number % 5:
-                msg = 'Buzz'
-
-            else:
+            if not msg:
                 msg = 'A entrada precisa ser um numero '
                 msg += 'inteiro divisivel por 3, 5 ou 15'
 
