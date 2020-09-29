@@ -1,7 +1,12 @@
 from application.database.database import Database
 
-DATABASE = Database('banco.db')
 
+class DatabaseConnection:
+    _database = None
 
-def get_database():
-    return DATABASE
+    @classmethod
+    def get_database(cls):
+        if cls._database is None:
+            cls._database = Database('banco.db')
+
+        return cls._database

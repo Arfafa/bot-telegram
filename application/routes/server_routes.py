@@ -1,8 +1,8 @@
 from flask import request
 from flask_restful import Resource
 from application.server import api
-from application.bot.utils import get_telegram_bot
-from application.database.utils import get_database
+from application.bot.utils import BotConnection
+from application.database.utils import DatabaseConnection
 from application.routes.utils import get_json
 from application.routes.utils import HTTP_STATUS_CODE
 from application.routes.logs import error_log
@@ -13,10 +13,10 @@ class Index(Resource):
         try:
             data = get_json(request)
 
-            database = get_database()
+            database = DatabaseConnection.get_database()
             database.insert_information(data)
 
-            bot = get_telegram_bot()
+            bot = BotConnection.get_telegram_bot()
             bot.send_message(data['message']['chat']['id'],
                              data['message']['text'])
 

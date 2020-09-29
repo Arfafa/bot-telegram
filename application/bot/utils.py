@@ -1,9 +1,14 @@
 import os
 from application.bot.telegram_bot import TelegramBot
 
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', '')
-TELEGRAM_BOT = TelegramBot(TELEGRAM_TOKEN)
 
+class BotConnection:
+    _telegram_token = os.environ.get('TELEGRAM_TOKEN', '')
+    _telegram_bot = None
 
-def get_telegram_bot():
-    return TELEGRAM_BOT
+    @classmethod
+    def get_telegram_bot(cls):
+        if cls._telegram_bot is None:
+            cls._telegram_bot = TelegramBot(cls._telegram_token)
+
+        return cls._telegram_bot
