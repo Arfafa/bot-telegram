@@ -38,7 +38,7 @@ $ python -m pip install -r requirements.txt
 E rodar o projeto com:
 
 ```bash
-$ python app.py
+$ python wsgi.py
 ```
 
 Para funcionar corretamente, o servidor flask e a conexão ssh devem estar 
