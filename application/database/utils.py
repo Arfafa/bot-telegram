@@ -1,4 +1,4 @@
-from application.database.database import Database
+from flask_sqlalchemy import SQLAlchemy
 
 
 class DatabaseConnection:
@@ -7,6 +7,6 @@ class DatabaseConnection:
     @classmethod
     def get_database(cls):
         if cls._database is None:
-            cls._database = Database('banco.db')
+            cls._database = SQLAlchemy()
 
         return cls._database

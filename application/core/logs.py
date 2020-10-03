@@ -1,5 +1,5 @@
-import logging
 import os
+import logging
 
 LOG_DIR = 'logs'+os.sep
 

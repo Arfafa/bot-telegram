@@ -1,0 +1,14 @@
+{
+  "message": {
+    "from": {
+      "first_name": "Miguel",
+      "is_bot": false,
+      "language_code": "pt_br",
+      "username": "arfafa",
+      "id": 123
+    },
+    "message_id": 111,
+    "date": 123456,
+    "text": "oi fafa"
+  }
+}
